@@ -1,5 +1,5 @@
 {
-  "name" : "Call Logger",
-  "description" : "Log Calls to API",
+  "name" : "OpenVBX Desk Applet",
+  "description" : "Log Calls to Desk",
   "type" : "voice"
 }

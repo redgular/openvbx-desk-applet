@@ -13,21 +13,12 @@ if(!$url){
 $call = normalize_phone_to_E164($_REQUEST['From']);
 
 $return = null;
-$response->say($call);
-$response->say($url);
-if(!$url){
-  $response->say('no url');
-  $url = 'sailthru';
-};
+
 $return = `twurl '/api/v1/customers.json?phone={$call}' --host {$url}.desk.com`;
 $json = $return[0];
 $get = null;
 $get = json_decode($json);
-if($return){
-  $response->say('return');
-} else{
-  $response->say('no response');
-};
+
 if($get->total == 0){
   $return = null;
   $json = null;

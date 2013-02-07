@@ -1,7 +1,7 @@
 <?php
  
 // The response object constructs the TwiML for our applet
-$response = new TwimlResponse;
+$response = new Response;
  
 //make an API call to the URL specified
 

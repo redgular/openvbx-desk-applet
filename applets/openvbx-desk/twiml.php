@@ -33,7 +33,7 @@ if($get->total == 0){
     exec("twurl '/api/v1/interactions.json' --host {$url}.desk.com -X POST -d 'interaction_subject=Phone Call' -d 'customer_id={$id}' -d 'interaction_channel=phone'", $submitted);
 };
 };
-if($get->total == 1){
+if($get->total >= 1){
   $results = $get->results;
   $firstcust = $results[0];
   $customer = $firstcust->customer;

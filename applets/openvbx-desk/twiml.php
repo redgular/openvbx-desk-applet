@@ -5,7 +5,7 @@ $response = new TwimlResponse;
  
 //make an API call to the URL specified
 
-$url = AppletInstance::getValue('promp-text');
+$url = AppletInstance::getValue('prompt-text');
 
 if(!$url){
   $url = 'sailthru';
